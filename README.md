@@ -15,7 +15,7 @@ v 0.1 - Initial release (instable version .. test only) - 06/01/2013
 
 
 Commands examples
------------------
+=================
 CREATE TABLE TableName (field1,field2,fieldN)
 INSERT INTO TableName (fieldValue1,fieldValue2,fieldValueN)
 SELECT 
@@ -32,7 +32,7 @@ SELECT
            if false or ommited, load table informations and append data content 
 
 Usage
------
+=====
 Import libMiniSQL
 Field database:miniSQL
 Self.database = New miniSQL
