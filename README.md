@@ -40,24 +40,35 @@ SELECT
  
  -> data = string with many lines with all fields values "fieldValue1,fieldValue2,fieldValue3~n"
  
- -> BOOL : if true do a auto truncate in table data and append the data content in the table
- 
-           if false or ommited, load table informations and append data content 
+ -> BOOL: 
+ if true do a auto truncate in table data and append the data content in the table
+ if false or ommited, load table informations and append data content 
            
 
 Usage
 =====
 Import libMiniSQL
+
 Field database:miniSQL
+
 Self.database = New miniSQL
+
 Self.database.Execute("CREATE TABLE score (name,points,time,stage)")
+
 Self.database.Execute("SHOW TABLES")
+
 Self.database.Execute("DISPLAY DATA FROM app_tables") '--> app_tables is a master table with all tables structures
+
 Self.database.Execute("INSERT INTO score (Robert,10,01:00,10)")
+
 Self.database.Execute("SELECT points,name FROM score")
+
 Self.database.Execute("TRUNCATE TABLE score")
+
 Self.database.ImportData(tableName,data)
+
 Self.database.ImportData(tableName,data,True) '-> truncate and import data to the table
+
 
 To Do
 -----
