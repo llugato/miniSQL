@@ -17,19 +17,33 @@ v 0.1 - Initial release (instable version .. test only) - 06/01/2013
 Commands examples
 =================
 CREATE TABLE TableName (field1,field2,fieldN)
+
 INSERT INTO TableName (fieldValue1,fieldValue2,fieldValueN)
+
 SELECT 
+
  SELECT COUNT(*) FROM TableName
+ 
  SELECT * FROM TableName
+ 
  SELECT field1,field2 FROM TableName
+
  ShowTables
+
  Display DATA FROM TableName
+ 
  DESC TableName
+ 
  TRUNCATE TABLE TableName
+ 
  ImportData(tableName,data,BOOL) 
+ 
  -> data = string with many lines with all fields values "fieldValue1,fieldValue2,fieldValue3~n"
+ 
  -> BOOL : if true do a auto truncate in table data and append the data content in the table
+ 
            if false or ommited, load table informations and append data content 
+           
 
 Usage
 =====
