@@ -44,7 +44,7 @@ Self.database.Execute("SELECT points,name FROM score")
 Self.database.Execute("TRUNCATE TABLE score")
 Self.database.ImportData(tableName,data)
 Self.database.ImportData(tableName,data,True) '-> truncate and import data to the table
- 
+
 To Do
 -----
 - When the instantiate the class and exist tables data to load .. recharge the tableStrctureCache 
