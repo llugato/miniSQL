@@ -40,8 +40,10 @@ SELECT
  
  -> data = string with many lines with all fields values "fieldValue1,fieldValue2,fieldValue3~n"
  
- -> BOOL: 
+ -> BOOL:
+ 
  if true do a auto truncate in table data and append the data content in the table
+ 
  if false or ommited, load table informations and append data content 
            
 
@@ -59,6 +61,10 @@ Self.database.Execute("SHOW TABLES")
 
 Self.database.Execute("DISPLAY DATA FROM app_tables") '--> app_tables is a master table with all tables structures
 
+Self.database.Execute("SELECT stage,name FROM score WHERE name=David,stage<21") 
+
+- The where clauseres need to be separated by ","
+
 Self.database.Execute("INSERT INTO score (Robert,10,01:00,10)")
 
 Self.database.Execute("SELECT points,name FROM score")
@@ -70,10 +76,13 @@ Self.database.ImportData(tableName,data)
 Self.database.ImportData(tableName,data,True) '-> truncate and import data to the table
 
 
+OBS: The return of a Select command is stored in the class property variable : queryResult
+
+Self.database.queryResult 
+
+
 To Do
 -----
-- When the instantiate the class and exist tables data to load .. recharge the tableStrctureCache 
-- Select clausure where
 - Update 
 - Delete 
 - Create index
