@@ -27,6 +27,11 @@ Class Game Extends App
 		Self.database.Execute("SELECT stage,name FROM score")
 		Print(Self.database.queryResult)
 		Print("============================================")
+
+		Self.database.Execute("SELECT stage,name FROM score WHERE name=David,stage<21")
+		Print(Self.database.queryResult)
+		Print("============================================")
+
 		Local scoreData:String = "Raul,10,01:00,99"+"~n"+"Josef,20,01:00,88"
 		Self.database.ImportData("score",scoreData,True)
 		Print("============================================")
